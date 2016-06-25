@@ -17,7 +17,7 @@ public class Area {
 		this.name=name;
 	}
 	public String getPcode(){
-		return code;
+		return pcode;
 	}
 	public void setPcode(String pcode){
 		this.pcode=pcode;

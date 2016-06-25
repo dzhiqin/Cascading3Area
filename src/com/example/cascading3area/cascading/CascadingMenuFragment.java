@@ -32,9 +32,9 @@ public class CascadingMenuFragment extends Fragment{
 		this.areas=areas;
 	}
 	
-	public void setMenuViewOnselectListener(
-			CascadingMenuViewOnSelectListener menuViewOnSelectListener){
-		
+	public void setMenuViewOnSelectListener(
+			CascadingMenuViewOnSelectListener menuViewOnSelectListener) {
+		this.menuViewOnSelectListener = menuViewOnSelectListener;
 	}
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);

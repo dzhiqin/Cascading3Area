@@ -3,16 +3,14 @@ package com.example.cascading3area.activity;
 import java.util.ArrayList;
 
 import com.example.cascading3area.R;
-import com.example.cascading3area.R.id;
-import com.example.cascading3area.R.layout;
-import com.example.cascading3area.R.menu;
+
 import com.example.cascading3area.cascading.CascadingMenuFragment;
 import com.example.cascading3area.cascading.CascadingMenuPopWindow;
 import com.example.cascading3area.db.DBHelper;
 import com.example.cascading3area.interfaces.CascadingMenuViewOnSelectListener;
 import com.example.cascading3area.model.Area;
 
-import android.app.Activity;
+
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
@@ -52,7 +50,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		if(cascadingMenuFragment==null){
 			cascadingMenuFragment=CascadingMenuFragment.getInstance();
 			cascadingMenuFragment.setMenuItems(provinceList);
-			cascadingMenuFragment.setMenuViewOnselectListener(new NMCascadingMenuViewOnSelectListener());
+			cascadingMenuFragment.setMenuViewOnSelectListener(new NMCascadingMenuViewOnSelectListener());
 			fragmentTransaction.replace(R.id.liner, cascadingMenuFragment);
 		}else{
 			fragmentTransaction.remove(cascadingMenuFragment);
@@ -85,9 +83,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		@Override
 		public void getValue(Area area) {
 			cascadingMenuFragment=null;
-					Toast.makeText(getApplicationContext(),""+area.getName(), 1000).show();
-		}
-		
+					Toast.makeText(getApplicationContext(),""+area.getName(), Toast.LENGTH_SHORT).show();
+		}	
 	}
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {

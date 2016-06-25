@@ -58,7 +58,7 @@ public class CascadingMenuView extends LinearLayout{
 	}
 	private void init(final Context context){
 		LayoutInflater inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		inflater.inflate(R.layout.view_regin, this,true);
+		inflater.inflate(R.layout.view_region, this,true);
 		firstMenuListView=(ListView)findViewById(R.id.listView);
 		secondMenuListView=(ListView)findViewById(R.id.listView2);
 		thirdMenuListView=(ListView)findViewById(R.id.listView3);
